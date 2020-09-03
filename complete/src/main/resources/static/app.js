@@ -13,18 +13,15 @@ function setConnected(connected) {
 }
 
 function connect() {
-    var socket = new SockJS('/gs-guide-websocket');
+    var socket = new SockJS('/jaos-card-id');
     stompClient = Stomp.over(socket);
     stompClient.connect({}, function (frame) {
         setConnected(true);
         console.log('Connected: ' + frame);
-        stompClient.subscribe('/topic/greetings', function (greeting) {
-            showGreeting(JSON.parse(greeting.body).content);
-        });
         
-         stompClient.subscribe('/topic/cid', function (card) {
+         stompClient.subscribe('/card/cid', function (card) {
          	  console.log('sub cid: ' + card);
-            showCard(JSON.parse(card.body).raw);
+            showCard(JSON.parse(card.body).data);
         });
     });
     
