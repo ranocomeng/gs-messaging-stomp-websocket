@@ -48,6 +48,41 @@
             </table>
         </div>
     </div>
+    
+    <div class="row">
+        <div class="col-md-6">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="connect">WebSocket connection:</label>
+                    <button id="connectCard" class="btn btn-default" type="submit" disabled="disabled" >Connect</button>
+                    <button id="disconnectCard" class="btn btn-default" type="submit" disabled="disabled">Disconnect
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="name">Read card?</label>
+                    <input type="text" id="cmd" class="form-control" placeholder="command here...">
+                </div>
+                <button id="command" class="btn btn-default" type="submit">Send Command</button>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table id="conversation" class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Card</th>
+                </tr>
+                </thead>
+                <tbody id="cardData">
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
 </body>
 </html>

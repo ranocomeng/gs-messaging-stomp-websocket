@@ -1,4 +1,4 @@
-package com.example.messagingstompwebsocket;
+package com.krungsri.jaos.card.model;
 
 public class HelloMessage {
 
